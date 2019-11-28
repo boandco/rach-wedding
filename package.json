@@ -1,0 +1,15 @@
+{
+  "name": "rach-wedding",
+  "version": "1.0.0",
+  "description": "Rachel's wedding website",
+  "main": "index.js",
+  "dependencies": {
+    "jade": "^1.11.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Connell McCarthy",
+  "license": "ISC"
+}
