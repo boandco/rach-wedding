@@ -4,13 +4,14 @@
   "description": "Website for Rachel's wedding",
   "main": "index.js",
   "dependencies": {
+    "express": "^4.17.1",
     "jade": "^1.11.0",
     "node-sass": "^4.13.0"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "node-sass --watch bin/scss -o bin/css"
+    "scss": "node-sass --watch public/scss -o public/css"
   },
   "repository": {
     "type": "git",

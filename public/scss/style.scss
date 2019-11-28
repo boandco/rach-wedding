@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=DM+Serif+Display|Poppins:400,600&display=swap');
+$heading-font: 'DM Serif Display', serif;
+$content-font: 'Poppins', sans-serif;
+
+$color-bg: #FAF4EE;
+$color-accent: #E36E5E;
+$color-typography: #2F2A29;
+
+body {
+	background:$color-bg;
+	color:$color-typography;
+	margin:0;
+	padding:0;
+	font-family: $content-font;
+}
+h1, h2, h3 {
+	font-family: $heading-font;
+}
+.container {
+	max-width:1600px;
+	margin:auto;
+	
+	.hero {
+		position: absolute;
+		width:100%;
+		top:50%;
+		left:50%;
+		-webkit-transform:translate(-50%,-50%);
+
+		.hero-text {
+			position: relative;
+			
+			h1 {
+				margin:0;
+				padding:0;
+				width:100%;
+				position: absolute;
+				top:-10px;
+				left:0;
+				font-size:10em;
+				color:#fff;
+				pointer-events:none;
+				text-align: center;
+				z-index: 1;
+			}
+			p {
+				position: relative;
+				z-index: 2;
+				font-size:2em;
+				max-width: 30%;
+				margin:auto;
+				text-align: center;
+			}
+		}
+	}
+}
