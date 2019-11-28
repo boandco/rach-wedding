@@ -1,15 +1,25 @@
 {
   "name": "rach-wedding",
   "version": "1.0.0",
-  "description": "Rachel's wedding website",
+  "description": "Website for Rachel's wedding",
   "main": "index.js",
   "dependencies": {
-    "jade": "^1.11.0"
+    "jade": "^1.11.0",
+    "node-sass": "^4.13.0"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch bin/scss -o bin/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/connellmccarthy/rach-wedding.git"
   },
   "author": "Connell McCarthy",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/connellmccarthy/rach-wedding/issues"
+  },
+  "homepage": "https://github.com/connellmccarthy/rach-wedding#readme"
 }
