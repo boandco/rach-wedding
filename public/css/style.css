@@ -10,32 +10,42 @@ h1, h2, h3 {
   font-family: "DM Serif Display", serif; }
 
 .container {
-  max-width: 1600px;
+  max-width: 1000px;
   margin: auto; }
-  .container .hero {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%); }
-    .container .hero .hero-text {
-      position: relative; }
-      .container .hero .hero-text h1 {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        position: absolute;
-        top: -10px;
-        left: 0;
-        font-size: 10em;
-        color: #fff;
-        pointer-events: none;
-        text-align: center;
-        z-index: 1; }
-      .container .hero .hero-text p {
-        position: relative;
-        z-index: 2;
-        font-size: 2em;
-        max-width: 30%;
-        margin: auto;
-        text-align: center; }
+
+.hero-space {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  pointer-events: none; }
+
+.hero {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%); }
+  .hero .hero-text {
+    position: relative; }
+    .hero .hero-text h1 {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      position: absolute;
+      top: -10px;
+      left: 0;
+      font-size: 10em;
+      color: #fff;
+      pointer-events: none;
+      text-align: center;
+      z-index: 1; }
+    .hero .hero-text p {
+      position: relative;
+      z-index: 2;
+      font-size: 2em;
+      max-width: 30%;
+      margin: auto;
+      text-align: center; }
+
+p.info {
+  font-size: 3em; }
