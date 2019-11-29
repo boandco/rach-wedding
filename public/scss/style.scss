@@ -84,8 +84,9 @@ a.link {
 	}
 
 	&:hover {
-		border-bottom:1px solid $color-accent;
-		
+		text-decoration: underline;
+		text-decoration-color:$color-accent;
+		text-decoration-style:wavy;
 		&:after {
 			right:-30px;
 		}
