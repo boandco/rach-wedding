@@ -1,0 +1,14 @@
+.container
+	.rsvp-form
+		h1 RSVP Below
+		p We're looking forward to partying with you, but we need some info first.
+		.inputs
+			.text-group
+				label(for="name") Your name
+				input#name(type="text", name="name")
+			.select-wrapper
+				select(id="food-pref", name="food-pref")
+					option(value="chicken") Chicken
+					option(value="fish") Fish
+					option(value="vegan") Vegan
+			button.btn.outline#light(type="submit") RSVP <i class="fal fa-arrow-right"></i>
