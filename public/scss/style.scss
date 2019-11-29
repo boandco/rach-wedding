@@ -5,11 +5,18 @@ $font-awesome: 'Font Awesome 5 Pro';
 
 $color-main: #FFFFFF;
 $color-bg: #FAF4EE;
-$color-accent: #c14433;
-$color-typography: #2F2A29;
+$color-accent: #6E846D;
+$color-typography: #010A0C;
+
+$break-medium: "1010px";
+$break-small: "768px";
 
 * {
 	box-sizing:border-box;
+}
+html, body {
+	min-height: 100%;
+	min-width: 100%;
 }
 body {
 	background:$color-main;
@@ -17,6 +24,7 @@ body {
 	font-family: $content-font;
 	margin:0;
 	padding:0;
+	overflow-x:hidden;
 }
 h1, h2, h3 {
 	font-family: $heading-font;
@@ -52,7 +60,6 @@ a.link {
 	position: relative;
 	text-decoration: none;
 	color:$color-typography;
-	-webkit-transition:.2s ease-in-out;
 
 	&:before {
 		content:"";
@@ -69,10 +76,10 @@ a.link {
 		font-family: $font-awesome;
 		font-weight: 300;
 		color:$color-typography;
-		font-size:.9em;
+		font-size:.7em;
 		position: absolute;
-		top: 5px;
-		right: -28px;
+		top: 7px;
+		right: -27px;
 		-webkit-transition:.2s ease-in-out;
 	}
 
@@ -83,11 +90,28 @@ a.link {
 			right:-30px;
 		}
 	}
+
+	&#light {
+		color:inherit;
+		&:before {
+			border-color:$color-main;
+		}
+		&:after {
+			color:$color-main
+		}
+		&:hover {
+			border-color:$color-main;
+		}
+	}
 }
 .container {
 	max-width:1600px;
 	margin:auto;
 	padding:0px 80px;
+
+	@media screen and (max-width: $break-small) {
+		padding:0px 30px;
+	}
 }
 .hero {
 	background:$color-bg;
@@ -121,18 +145,75 @@ a.link {
 			margin:32px auto;
 		}
 	}
+
+	@media screen and (max-width: $break-small) {
+		height:auto;
+		padding-bottom:50px;
+		
+		.hero-text {
+			position: unset;
+			-webkit-transform:none;
+
+			h1 {
+				position: unset;
+				top:0;
+				font-size:5em;
+			}
+			p {
+				font-size:1.5em;
+				max-width:calc(100% - 60px);
+			}
+		}
+	}
 }
 .rsvp-form {
 	background:$color-accent;
 	color:$color-main;
-	padding:100px 100px;
+	max-width:calc(100% - 160px);
+	margin:auto;
+	padding:100px 100px 25px 100px;
 	margin-top:-200px;
+	
+	@media screen and (max-width: $break-medium) {
+		padding: 25px 80px 25px 80px;
+	}
+	@media screen and (max-width: $break-small) {
+		padding: 30px;
+		margin-top:0;
+		max-width:100%;
+	}
+
+	form {
+		margin-top:50px;
+	}
+
+	.confirmation {
+		display: none;
+		margin-top:50px;
+	}
 
 	.inputs {
 		display:grid;
-		grid-template-columns: 1fr 1fr 1fr;
 		width:100%;
-		margin-top:50px;
+
+		&.one {
+			grid-template-columns: 1fr 1fr;
+			border-bottom:1px solid $color-main;
+			border-top:1px solid $color-main;
+
+			.input-group:last-child {
+				border-right:1px solid $color-main;
+			}
+		}
+		&.two {
+			grid-template-columns: 1fr 1fr 1fr;
+
+			.input-group {
+				input[type="text"], input[type="email"] {
+					border-bottom:1px solid $color-main;
+				}
+			}
+		}
 
 		.input-group {
 			position: relative;
@@ -145,23 +226,20 @@ a.link {
 				-webkit-transition:.2s ease-in-out;
 
 				&.active {
-					top: 4px;
-    				left: -5px;
+					top: 10px;
     				opacity:.8;
     				text-transform: uppercase;
     				letter-spacing: .1em;
-					-webkit-transform:scale(.7);
+					font-size:.5em;
 				}
 			}
-			input[type="text"] {
+			input[type="text"], input[type="email"] {
 				background:none;
 				outline:none;
 				border:none;
 				height: 100%;
 				font-size:1em;
-				border-bottom:1px solid $color-main;
 				border-left:1px solid $color-main;
-				border-top:1px solid $color-main;
 				font-family:$content-font;
 				color:$color-main;
 				width:100%;
@@ -181,15 +259,11 @@ a.link {
 				font-size:1em;
 				border-bottom:1px solid $color-main;
 				border-left:1px solid $color-main;
-				border-top:1px solid $color-main;
 				font-family:$content-font;
 				color:$color-main;
 				padding: 25px 10px 15px 10px;
 			}
 			&.select {
-				label.active {
-					left:-12px;
-				}
 				&:after {
 					pointer-events:none;
 					content:"\f078";
@@ -213,6 +287,96 @@ a.link {
     		text-transform: uppercase;
     		letter-spacing: .1em;
     		cursor: pointer;
+    		border-top:none;
+		}
+
+		@media screen and (max-width: $break-medium) {
+			&.two {
+				grid-template-columns: 1fr 1fr;
+				grid-template-rows:1fr 1fr;
+
+				button[type="submit"] {
+					grid-column: 1/3;
+				}
+				select {
+					border-right:1px solid $color-main;
+				}
+			}
+		}
+		@media screen and (max-width: $break-small) {
+			grid-template-columns:1fr;
+
+			&.one {
+				grid-template-rows:1fr 1fr;
+				input[type="text"], input[type="email"] {
+					border-right:1px solid $color-main;
+				}
+				.input-group:last-child {
+					border-top:1px solid $color-main;
+					border-right:none;
+				}
+			}
+			&.two {
+				grid-template-rows:1fr 1fr 1fr;
+			}
+
+			.input-group {
+				grid-column:1/3;
+
+				input[type="text"], input[type="email"], select {
+					border-right:1px solid $color-main;
+				}
+			}
+		}
+	}
+}
+.footer {
+	display:grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	font-size:.7em;
+	margin-top:100px;
+
+	.left {
+		grid-column:1;
+	}
+	.right {
+		grid-column:2/4;
+	}
+
+	ul {
+		list-style-type: none;
+		text-align: right;
+
+		li {
+			display:inline-block;
+			margin-left:50px;
+
+			a {
+				color:inherit;
+				text-transform: uppercase;
+				letter-spacing: .1em;
+				text-decoration: none;
+				-webkit-transition:.2s ease-in-out;
+
+				&:hover {
+					opacity: .5;
+				}
+			}
+		}
+	}
+
+	@media screen and (max-width: $break-medium) {
+		display:block;
+		text-align: center;
+
+		ul {
+			text-align: center;
+			padding:0;
+
+			li {
+				margin-left:0;
+				margin:0px 10px;
+			}
 		}
 	}
 }
