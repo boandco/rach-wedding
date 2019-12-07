@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=DM+Serif+Display|Poppins:400,600&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Rozha+One|Poppins:400,600&display=swap");
 * {
   box-sizing: border-box; }
 
@@ -9,16 +9,20 @@ html, body {
 body {
   background: #FFFFFF;
   color: #010A0C;
-  font-family: "Poppins", sans-serif;
+  font-family: "Apercu", sans-serif;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  font-size: 2.3em;
+  line-height: 1.5em; }
 
 h1, h2, h3 {
-  font-family: "DM Serif Display", serif; }
+  font-family: "Apercu", sans-serif;
+  font-weight: 600; }
 
-p.info {
-  font-size: 3em; }
+.wrapper {
+  width: calc(100% - 160px);
+  margin: auto; }
 
 .btn {
   padding: 12px 50px;
@@ -76,63 +80,35 @@ a.link {
     a.link#light:hover {
       border-color: #FFFFFF; }
 
-.container {
-  max-width: 1600px;
-  margin: auto;
-  padding: 0px 80px; }
-  @media screen and (max-width: 768px) {
-    .container {
-      padding: 0px 30px; } }
-
-.hero {
-  background: #FAF4EE;
+.section {
   width: 100%;
-  height: 100vh; }
-  .hero .hero-text {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    text-align: center; }
-    .hero .hero-text h1 {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      position: absolute;
-      top: -115px;
-      left: 0;
-      font-size: 12em;
-      color: #fff;
-      pointer-events: none;
-      z-index: 1; }
-    .hero .hero-text p {
-      position: relative;
-      z-index: 2;
-      font-size: 2em;
-      max-width: 60%;
-      margin: 32px auto; }
-  @media screen and (max-width: 768px) {
-    .hero {
-      height: auto;
-      padding-bottom: 50px; }
-      .hero .hero-text {
-        position: unset;
-        -webkit-transform: none; }
-        .hero .hero-text h1 {
-          position: unset;
-          top: 0;
-          font-size: 5em; }
-        .hero .hero-text p {
-          font-size: 1.5em;
-          max-width: calc(100% - 60px); } }
+  max-width: 1600px;
+  margin: 250px auto; }
+  .section:last-child {
+    margin-bottom: 0; }
+
+h1.intro {
+  font-size: 5.7vw;
+  line-height: 1em;
+  width: 100%;
+  margin-bottom: 100px; }
+
+.sub {
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+  .sub p {
+    margin: 0;
+    padding: 0; }
+  .sub .left {
+    font-size: .5em;
+    line-height: 2em;
+    opacity: .5; }
 
 .rsvp-form {
-  background: #6E846D;
+  background: #010A0C;
   color: #FFFFFF;
-  max-width: calc(100% - 160px);
   margin: auto;
-  padding: 100px 100px 25px 100px;
-  margin-top: -200px; }
+  padding: 100px 80px 50px 80px; }
   @media screen and (max-width: 1010px) {
     .rsvp-form {
       padding: 25px 80px 25px 80px; } }
@@ -142,7 +118,10 @@ a.link {
       margin-top: 0;
       max-width: 100%; } }
   .rsvp-form form {
-    margin-top: 50px; }
+    margin-top: 50px;
+    font-size: .5em; }
+  .rsvp-form p {
+    width: 50%; }
   .rsvp-form .confirmation {
     display: none;
     margin-top: 50px; }
@@ -160,15 +139,16 @@ a.link {
       .rsvp-form .inputs.two .input-group input[type="text"], .rsvp-form .inputs.two .input-group input[type="email"] {
         border-bottom: 1px solid #FFFFFF; }
     .rsvp-form .inputs .input-group {
-      position: relative; }
+      position: relative;
+      height: 100%; }
       .rsvp-form .inputs .input-group label {
         position: absolute;
-        top: 20px;
-        left: 10px;
+        top: 8px;
+        left: 11px;
         pointer-events: none;
         -webkit-transition: .2s ease-in-out; }
         .rsvp-form .inputs .input-group label.active {
-          top: 10px;
+          top: -12px;
           opacity: .8;
           text-transform: uppercase;
           letter-spacing: .1em;
@@ -180,7 +160,7 @@ a.link {
         height: 100%;
         font-size: 1em;
         border-left: 1px solid #FFFFFF;
-        font-family: "Poppins", sans-serif;
+        font-family: "Apercu", sans-serif;
         color: #FFFFFF;
         width: 100%;
         padding: 25px 10px 15px 10px; }
@@ -198,14 +178,14 @@ a.link {
         font-size: 1em;
         border-bottom: 1px solid #FFFFFF;
         border-left: 1px solid #FFFFFF;
-        font-family: "Poppins", sans-serif;
+        font-family: "Apercu", sans-serif;
         color: #FFFFFF;
         padding: 25px 10px 15px 10px; }
       .rsvp-form .inputs .input-group.select:after {
         pointer-events: none;
         content: "\f078";
         position: absolute;
-        top: 30px;
+        top: 6px;
         right: 15px;
         font-family: "Font Awesome 5 Pro";
         font-weight: 300;
@@ -222,6 +202,10 @@ a.link {
       letter-spacing: .1em;
       cursor: pointer;
       border-top: none; }
+      .rsvp-form .inputs button[type="submit"] .fal {
+        -webkit-transition: margin .2s ease-in-out; }
+      .rsvp-form .inputs button[type="submit"]:hover .fal {
+        margin-left: 5px; }
     @media screen and (max-width: 1010px) {
       .rsvp-form .inputs.two {
         grid-template-columns: 1fr 1fr;
@@ -250,7 +234,7 @@ a.link {
 .footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  font-size: .7em;
+  font-size: .3em;
   margin-top: 100px; }
   .footer .left {
     grid-column: 1; }

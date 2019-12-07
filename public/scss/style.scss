@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=DM+Serif+Display|Poppins:400,600&display=swap');
-$heading-font: 'DM Serif Display', serif;
-$content-font: 'Poppins', sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Rozha+One|Poppins:400,600&display=swap');
+$heading-font: 'Apercu', sans-serif;
+$content-font: 'Apercu', sans-serif;
 $font-awesome: 'Font Awesome 5 Pro';
 
 $color-main: #FFFFFF;
@@ -25,12 +25,16 @@ body {
 	margin:0;
 	padding:0;
 	overflow-x:hidden;
+	font-size:2.3em;
+	line-height: 1.5em;
 }
 h1, h2, h3 {
 	font-family: $heading-font;
+	font-weight:600;
 }
-p.info {
-	font-size:3em;
+.wrapper {
+	width:calc(100% - 160px);
+	margin:auto;
 }
 .btn {
 	padding:12px 50px;
@@ -105,75 +109,41 @@ a.link {
 		}
 	}
 }
-.container {
+.section {
+	width:100%;
 	max-width:1600px;
-	margin:auto;
-	padding:0px 80px;
+	margin:250px auto;
 
-	@media screen and (max-width: $break-small) {
-		padding:0px 30px;
+	&:last-child {
+		margin-bottom:0;
 	}
 }
-.hero {
-	background:$color-bg;
+h1.intro {
+	font-size:5.7vw;
+	line-height: 1em;
 	width:100%;
-	height:100vh;
+	margin-bottom:100px;
+}
+.sub {
+	display: grid;
+	grid-template-columns:1fr 1fr;
 
-	.hero-text {
-		position: absolute;
-		width:100%;
-		top:50%;
-		-webkit-transform:translateY(-50%);
-		text-align: center;
-		
-		h1 {
-			margin:0;
-			padding:0;
-			width:100%;
-			position: absolute;
-			top:-115px;
-			left:0;
-			font-size:12em;
-			color:#fff;
-			pointer-events:none;
-			z-index: 1;
-		}
-		p {
-			position: relative;
-			z-index: 2;
-			font-size:2em;
-			max-width: 60%;
-			margin:32px auto;
-		}
+	p {
+		margin:0;
+		padding:0;
 	}
 
-	@media screen and (max-width: $break-small) {
-		height:auto;
-		padding-bottom:50px;
-		
-		.hero-text {
-			position: unset;
-			-webkit-transform:none;
-
-			h1 {
-				position: unset;
-				top:0;
-				font-size:5em;
-			}
-			p {
-				font-size:1.5em;
-				max-width:calc(100% - 60px);
-			}
-		}
+	.left {
+		font-size:.5em;
+		line-height: 2em;
+		opacity: .5;
 	}
 }
 .rsvp-form {
-	background:$color-accent;
+	background:$color-typography;
 	color:$color-main;
-	max-width:calc(100% - 160px);
 	margin:auto;
-	padding:100px 100px 25px 100px;
-	margin-top:-200px;
+	padding:100px 80px 50px 80px;
 	
 	@media screen and (max-width: $break-medium) {
 		padding: 25px 80px 25px 80px;
@@ -186,8 +156,11 @@ a.link {
 
 	form {
 		margin-top:50px;
+		font-size:.5em;
 	}
-
+	p {
+		width:50%;
+	}
 	.confirmation {
 		display: none;
 		margin-top:50px;
@@ -218,16 +191,17 @@ a.link {
 
 		.input-group {
 			position: relative;
+			height: 100%;
 
 			label {
 				position: absolute;
-				top: 20px;
-    			left: 10px;
+				top: 8px;
+    			left: 11px;
     			pointer-events:none;
 				-webkit-transition:.2s ease-in-out;
 
 				&.active {
-					top: 10px;
+					top: -12px;
     				opacity:.8;
     				text-transform: uppercase;
     				letter-spacing: .1em;
@@ -269,7 +243,7 @@ a.link {
 					pointer-events:none;
 					content:"\f078";
 					position: absolute;
-					top:30px;
+					top:6px;
 					right:15px;
 					font-family: $font-awesome;
 					font-weight:300;
@@ -289,6 +263,14 @@ a.link {
     		letter-spacing: .1em;
     		cursor: pointer;
     		border-top:none;
+
+    		.fal {
+    			-webkit-transition:margin .2s ease-in-out;
+    		}
+
+    		&:hover .fal {
+    			margin-left:5px;
+    		}
 		}
 
 		@media screen and (max-width: $break-medium) {
@@ -334,7 +316,7 @@ a.link {
 .footer {
 	display:grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	font-size:.7em;
+	font-size:.3em;
 	margin-top:100px;
 
 	.left {
