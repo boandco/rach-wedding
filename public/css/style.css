@@ -1,4 +1,34 @@
-@import url("https://fonts.googleapis.com/css?family=Rozha+One|Poppins:400,600&display=swap");
+.peach {
+  background-color: #C8987E;
+  color: #FFFFFF; }
+
+.blue {
+  background-color: #F2F6F8; }
+
+.offwhite {
+  background-color: #FAF4EE; }
+
+.green {
+  background-color: #6E846D; }
+
+.btn {
+  padding: 12px 50px;
+  text-decoration: none;
+  border: 1px solid;
+  -webkit-transition: .2s ease-in-out; }
+  .btn.outline#dark {
+    border-color: #D1783B;
+    color: #D1783B; }
+  .btn.outline#dark:hover {
+    background: #D1783B;
+    color: #D1783B; }
+  .btn.outline#light {
+    border-color: #FFFFFF;
+    color: #FFFFFF; }
+  .btn.outline#light:hover {
+    background: #FFFFFF;
+    color: #010A0C; }
+
 * {
   box-sizing: border-box; }
 
@@ -8,39 +38,27 @@ html, body {
 
 body {
   background: #FFFFFF;
-  color: #010A0C;
-  font-family: "Apercu", sans-serif;
+  font-family: "GT America Trial", sans-serif;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
-  font-size: 2.3em;
-  line-height: 1.5em; }
+  font-size: 1.2em;
+  overflow-x: hidden; }
 
 h1, h2, h3 {
-  font-family: "Apercu", sans-serif;
+  font-family: "Beirut Display Trial", sans-serif;
   font-weight: 600; }
+
+.section {
+  width: 100%;
+  margin: auto;
+  padding: 100px 0px; }
+  .section.pb_0 {
+    padding-bottom: 25px; }
 
 .wrapper {
   width: calc(100% - 160px);
+  max-width: 1600px;
   margin: auto; }
-
-.btn {
-  padding: 12px 50px;
-  text-decoration: none;
-  border: 1px solid;
-  -webkit-transition: .2s ease-in-out; }
-  .btn.outline#dark {
-    border-color: #6E846D;
-    color: #6E846D; }
-  .btn.outline#dark:hover {
-    background: #6E846D;
-    color: #FAF4EE; }
-  .btn.outline#light {
-    border-color: #FFFFFF;
-    color: #FFFFFF; }
-  .btn.outline#light:hover {
-    background: #FFFFFF;
-    color: #010A0C; }
 
 a.link {
   position: relative;
@@ -54,9 +72,9 @@ a.link {
     border-radius: 50%;
     top: 0;
     right: -35px;
-    border: 1px solid #6E846D; }
+    border: 1px solid #D1783B; }
   a.link:after {
-    content: '\f061';
+    content: '\f178';
     font-family: "Font Awesome 5 Pro";
     font-weight: 300;
     color: #010A0C;
@@ -67,48 +85,108 @@ a.link {
     -webkit-transition: .2s ease-in-out; }
   a.link:hover {
     text-decoration: underline;
-    text-decoration-color: #6E846D;
+    text-decoration-color: #D1783B;
     text-decoration-style: wavy; }
     a.link:hover:after {
       right: -30px; }
   a.link#light {
     color: inherit; }
     a.link#light:before {
-      border-color: #FFFFFF; }
+      border-color: #D1783B; }
     a.link#light:after {
-      color: #FFFFFF; }
+      color: #D1783B; }
     a.link#light:hover {
-      border-color: #FFFFFF; }
+      border-color: #D1783B; }
 
-.section {
-  width: 100%;
-  max-width: 1600px;
-  margin: 250px auto; }
-  .section:last-child {
+.hero {
+  text-align: center;
+  min-height: 100vh;
+  position: relative; }
+  .hero h1 {
+    font-size: 4vw;
     margin-bottom: 0; }
+  .hero .text {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%); }
+  .hero .scroll-box {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    -webkit-transform: translateX(-50%); }
+    .hero .scroll-box p {
+      display: inline-block;
+      position: relative; }
+      .hero .scroll-box p:before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: -60px;
+        height: 40px;
+        width: 40px;
+        border: 1px solid #EDCECC;
+        border-radius: 50px; }
+      .hero .scroll-box p:after {
+        content: url(../img/arrow-down.svg);
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        top: -20px;
+        left: -58px;
+        fill: #FFFFFF;
+        animation-name: scroll_down;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95); }
 
-h1.intro {
-  font-size: 5.7vw;
-  line-height: 1em;
-  width: 100%;
-  margin-bottom: 100px; }
+@keyframes scroll_down {
+  0% {
+    top: -20px; }
+  25% {
+    top: -30px; }
+  50% {
+    top: -20px; }
+  100% {
+    top: -20px; } }
 
-.sub {
-  display: grid;
-  grid-template-columns: 1fr 1fr; }
-  .sub p {
-    margin: 0;
-    padding: 0; }
-  .sub .left {
-    font-size: .5em;
-    line-height: 2em;
-    opacity: .5; }
+.nav {
+  position: sticky;
+  top: 0;
+  padding: 25px 0px; }
+  .nav .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-content: middle; }
+  .nav .date {
+    font-size: .6em;
+    opacity: .5;
+    padding: 0;
+    margin: 0; }
+  .nav .logo {
+    text-align: center; }
+  .nav ul.nav_links {
+    text-align: right;
+    list-style-type: none;
+    padding: 0;
+    margin: 0; }
+    .nav ul.nav_links li {
+      display: inline-block;
+      margin-left: 30px; }
+  .nav a {
+    color: #010A0C;
+    font-size: .6em;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: .1em;
+    transition: .2s ease-in-out; }
+    .nav a:hover {
+      opacity: .5; }
 
 .rsvp-form {
-  background: #010A0C;
   color: #FFFFFF;
-  margin: auto;
-  padding: 100px 80px 50px 80px; }
+  margin: auto; }
   @media screen and (max-width: 1010px) {
     .rsvp-form {
       padding: 25px 80px 25px 80px; } }
@@ -119,9 +197,7 @@ h1.intro {
       max-width: 100%; } }
   .rsvp-form form {
     margin-top: 50px;
-    font-size: .5em; }
-  .rsvp-form p {
-    width: 50%; }
+    font-size: .8em; }
   .rsvp-form .confirmation {
     display: none;
     margin-top: 50px; }
@@ -143,12 +219,12 @@ h1.intro {
       height: 100%; }
       .rsvp-form .inputs .input-group label {
         position: absolute;
-        top: 8px;
+        top: 20px;
         left: 11px;
         pointer-events: none;
         -webkit-transition: .2s ease-in-out; }
         .rsvp-form .inputs .input-group label.active {
-          top: -12px;
+          top: 9px;
           opacity: .8;
           text-transform: uppercase;
           letter-spacing: .1em;
@@ -160,7 +236,7 @@ h1.intro {
         height: 100%;
         font-size: 1em;
         border-left: 1px solid #FFFFFF;
-        font-family: "Apercu", sans-serif;
+        font-family: "GT America Trial", sans-serif;
         color: #FFFFFF;
         width: 100%;
         padding: 25px 10px 15px 10px; }
@@ -178,7 +254,7 @@ h1.intro {
         font-size: 1em;
         border-bottom: 1px solid #FFFFFF;
         border-left: 1px solid #FFFFFF;
-        font-family: "Apercu", sans-serif;
+        font-family: "GT America Trial", sans-serif;
         color: #FFFFFF;
         padding: 25px 10px 15px 10px; }
       .rsvp-form .inputs .input-group.select:after {
@@ -197,7 +273,6 @@ h1.intro {
       -webkit-appearance: none;
       -moz-appearance: none;
       appearance: none;
-      font-size: .8em;
       text-transform: uppercase;
       letter-spacing: .1em;
       cursor: pointer;
@@ -234,7 +309,7 @@ h1.intro {
 .footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  font-size: .3em;
+  font-size: .6em;
   margin-top: 100px; }
   .footer .left {
     grid-column: 1; }
