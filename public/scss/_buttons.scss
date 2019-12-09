@@ -1,0 +1,26 @@
+$font-awesome: 'Font Awesome 5 Pro';
+
+.btn {
+	padding:12px 50px;
+	text-decoration: none;
+	border:1px solid;
+
+	-webkit-transition:.2s ease-in-out;
+
+	&.outline#dark {
+		border-color:$color_orange;
+		color:$color_orange;
+	}
+	&.outline#dark:hover {
+		background:$color_orange;
+		color:$color_orange;
+	}
+	&.outline#light {
+		border-color:$color_white;
+		color:$color_white;
+	}
+	&.outline#light:hover {
+		background:$color_white;
+		color:$color_black;
+	}
+}
