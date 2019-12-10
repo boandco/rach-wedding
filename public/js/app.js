@@ -7,6 +7,10 @@ $('input').focusout(function(event) {
 	}
 });
 
+$(document).scroll(function() {
+	$('.invited').css('transform', 'rotate(' + $(this).scrollTop() / 10 + 'deg)');
+});
+
 $('#rsvp-form').submit(function() {
 	event.preventDefault();
 	var name = encodeURIComponent($('#name').val());

@@ -113,9 +113,9 @@ a.link {
     -webkit-transform: translate(-50%, -50%); }
   .hero .scroll-box {
     position: absolute;
-    bottom: 50px;
+    bottom: 80px;
     left: 50%;
-    -webkit-transform: translateX(-50%); }
+    margin-left: -50px; }
     .hero .scroll-box p {
       display: inline-block;
       position: relative; }
@@ -183,6 +183,17 @@ a.link {
     transition: .2s ease-in-out; }
     .nav a:hover {
       opacity: .5; }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+  .grid .left, .grid .right {
+    position: relative; }
+  .grid .invited {
+    position: absolute;
+    top: -80px;
+    left: -100px;
+    -webkit-transition: .2s; }
 
 .rsvp-form {
   color: #FFFFFF;

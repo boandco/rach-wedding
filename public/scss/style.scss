@@ -68,9 +68,9 @@ a.link {
 	}
 	.scroll-box {
 		position: absolute;
-		bottom:50px;
+		bottom:80px;
 		left:50%;
-		-webkit-transform:translateX(-50%);
+		margin-left:-50px;
 
 		p {
 			display: inline-block;
@@ -146,6 +146,20 @@ a.link {
 		&:hover {
 			opacity: .5;
 		}
+	}
+}
+
+.grid {
+	display:grid;
+	grid-template-columns:1fr 1fr;
+	.left, .right {
+		position: relative;
+	}
+	.invited {
+		position: absolute;
+		top:-80px;
+		left:-100px;
+		-webkit-transition:.2s;
 	}
 }
 
