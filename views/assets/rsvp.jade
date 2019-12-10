@@ -1,25 +1,26 @@
-.section.green.pb_0
-	.wrapper
-		.rsvp-form(data-scroll, data-scroll-speed="1")
-			p#rsvp-sub We're looking forward to partying with you, but we need some info first.
-			a.link.confirmation#light(href="", target="_blank") Save the date to calendar
-			form#rsvp-form(action="" method="POST" target="no-target" autocomplete="off")
-				.inputs.one
-					.input-group
-						label(for="name") Your name
-						input#name(type="text", name="name", required)
-					.input-group
-						label(for="email") Your email
-						input#email(type="email", name="email", required)
-				.inputs.two
-					.input-group
-						label(for="dietary") Dietary Restrictions
-						input#dietary(type="text", name="dietary")
-					.input-group.select
-						label.active(for="attend") Attending
-						select#attend(name="attend")
-							option(value="Yes") Yes,  I'll be there
-							option(value="No") Sorry, can't make it
-					button.btn.outline#light(type="submit") RSVP <i class="fal fa-long-arrow-right"></i>
-			iframe(src="#" id="no-target" name="no-target" style="visibility:hidden;display:none;")
-			include footer.jade
+.wrapper
+	.section.green.pb_0
+		.wrapper
+			.rsvp-form(data-scroll, data-scroll-speed="1")
+				p#rsvp-sub We're looking forward to partying with you, but we need some info first.
+				a.link.confirmation#light(href="", target="_blank") Save the date to calendar
+				form#rsvp-form(action="" method="POST" target="no-target" autocomplete="off")
+					.inputs.one
+						.input-group
+							label(for="name") Your name
+							input#name(type="text", name="name", required)
+						.input-group
+							label(for="email") Your email
+							input#email(type="email", name="email", required)
+					.inputs.two
+						.input-group
+							label(for="dietary") Dietary Restrictions
+							input#dietary(type="text", name="dietary")
+						.input-group.select
+							label.active(for="attend") Attending
+							select#attend(name="attend")
+								option(value="Yes") Yes,  I'll be there
+								option(value="No") Sorry, can't make it
+						button.btn.outline#light(type="submit") RSVP <i class="fal fa-long-arrow-right"></i>
+				iframe(src="#" id="no-target" name="no-target" style="visibility:hidden;display:none;")
+				include footer.jade

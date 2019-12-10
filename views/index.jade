@@ -11,12 +11,13 @@ html
 	body
 		.o-scroll#js-scroll
 			include assets/hero.jade
-			include assets/nav.jade
-			include assets/section_1.jade
-			include assets/section_1.jade
-			include assets/section_1.jade
-			include assets/section_1.jade
-			include assets/rsvp.jade
+			#nav-scroll
+				include assets/nav.jade
+				include assets/section_1.jade
+				include assets/section_1.jade
+				include assets/section_1.jade
+				include assets/section_1.jade
+				include assets/rsvp.jade
 
 	script(src="js/app.js", type="text/javascript")
 	script(src="js/locomotive-scroll.min.js", type="text/javascript")
