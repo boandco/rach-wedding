@@ -1,5 +1,11 @@
+@import 'mixins';
+
+@include font-face("GT America Expanded", '/fonts/GT-America-Trial-Expanded-Regular', null, null, woff);
+@include font-face("GT America Extended", '/fonts/GT-America-Trial-Extended-Regular', null, null, woff);
+
 $heading-font: 'Beirut Display Trial', serif;
-$content-font: 'GT America Trial', sans-serif;
+$font-extended: 'GT America Extended', sans-serif;
+$font-expanded: 'GT America Expanded', sans-serif;
 
 $break-medium: "1010px";
 $break-small: "768px";
@@ -13,37 +19,55 @@ html, body {
 }
 body {
 	background:$color_white;
-	font-family: $content-font;
+	font-family: $font-extended;
 	margin:0;
 	padding:0;
 	font-size:1.2em;
 	overflow-x:hidden;
+	scroll-behaviour:smooth;
 }
 h1, h2, h3 {
 	font-family: $heading-font;
 	font-weight:600;
 }
+.expanded {
+	font-family: $font-expanded;
+}
 .section {
 	width:100%;
 	margin:auto;
-	padding:100px 0px;
+	padding:200px 0px;
 
 	&.pb_0 {
+		padding-top:100px;
 		padding-bottom:25px;
 	}
 	&.pt {
 		margin-top:-135px;
 		padding-top: 250px;
 	}
+	&.pb {
+		padding-bottom:500px;
+	}
+	&.rsvp {
+		margin-top:-250px;
+	}
+}
+.mt-1 {
+	margin-top:100px;
 }
 .wrapper {
 	width:calc(100% - 160px);
 	max-width:1600px;
 	margin:auto;
+
+	img {
+		width:100%;
+	}
 }
 p {
 	&.major {
-		font-size:1.5em;
+		font-size:1.3em;
 		line-height: 1.5em;
 	}
 }

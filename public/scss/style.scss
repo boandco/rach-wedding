@@ -1,5 +1,10 @@
 @import 'colors', 'buttons', 'structure';
 
+#confettiCanvas {
+	position: fixed !important;
+	pointer-events:none;
+}
+
 a.link {
 	position: relative;
 	text-decoration: none;
@@ -12,18 +17,16 @@ a.link {
 		width:25px;
 		border-radius: 50%;
 		top:0;
-		right:-35px;
+		right:-42px;
 		border:1px solid $color_orange;
 	}
 	&:after {
-		content:'\f178';
-		font-family: $font-awesome;
-		font-weight: 300;
-		color:$color_black;
-		font-size:.7em;
+		content:url(../img/arrow-right.svg);
+		height:25px;
+		width:25px;
 		position: absolute;
-		top: 7px;
-		right: -27px;
+		top: 1px;
+		right: -34px;
 		-webkit-transition:.2s ease-in-out;
 	}
 
@@ -32,7 +35,7 @@ a.link {
 		text-decoration-color:$color_orange;
 		// text-decoration-style:wavy;
 		&:after {
-			right:-30px;
+			right:-39px;
 		}
 	}
 
@@ -70,8 +73,11 @@ a.link {
 		position: absolute;
 		bottom:60px;
 		left:50%;
-		margin-left:-50px;
-
+		margin-left:-80px;
+		font-size:.8em;
+		a {
+			color:inherit;
+		}
 		p {
 			display: inline-block;
 			position: relative;
@@ -92,7 +98,7 @@ a.link {
 				position: absolute;
 				top: -20px;
 				left: -58px;
-				fill:$color_white;
+				stroke:$color_white;
 				animation-name:scroll_down;
 				animation-duration: 2s;
 				animation-iteration-count:infinite;
@@ -113,6 +119,7 @@ a.link {
 	top:0;
 	padding:25px 0px;
 	z-index: 99;
+	font-family: $font-expanded;
 	.wrapper {
 		display:grid;
 		grid-template-columns:1fr 1fr 1fr;
@@ -162,9 +169,6 @@ a.link {
 	}
 	.right {
 		padding-left:50px;
-	}
-	img {
-		width:100%;
 	}
 	.invited {
 		position: absolute;
@@ -257,8 +261,8 @@ a.link {
 				height: 100%;
 				font-size:1em;
 				border-left:1px solid $color_white;
-				font-family:$content-font;
 				color:$color_white;
+				font-family: inherit;
 				width:100%;
 				padding:25px 10px 15px 10px;
 			}
@@ -276,7 +280,7 @@ a.link {
 				font-size:1em;
 				border-bottom:1px solid $color_white;
 				border-left:1px solid $color_white;
-				font-family:$content-font;
+				font-family: inherit;
 				color:$color_white;
 				padding: 25px 10px 15px 10px;
 			}
@@ -359,6 +363,7 @@ a.link {
 	grid-template-columns: 1fr 1fr 1fr;
 	font-size:.6em;
 	margin-top:100px;
+	font-family: $font-expanded;
 
 	.left {
 		grid-column:1;

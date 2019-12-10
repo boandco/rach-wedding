@@ -29,6 +29,14 @@
     background: #FFFFFF;
     color: #010A0C; }
 
+@font-face {
+  font-family: "GT America Expanded";
+  src: url("/fonts/GT-America-Trial-Expanded-Regular.woff") format("woff"); }
+
+@font-face {
+  font-family: "GT America Extended";
+  src: url("/fonts/GT-America-Trial-Extended-Regular.woff") format("woff"); }
+
 * {
   box-sizing: border-box; }
 
@@ -38,34 +46,52 @@ html, body {
 
 body {
   background: #FFFFFF;
-  font-family: "GT America Trial", sans-serif;
+  font-family: "GT America Extended", sans-serif;
   margin: 0;
   padding: 0;
   font-size: 1.2em;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  scroll-behaviour: smooth; }
 
 h1, h2, h3 {
   font-family: "Beirut Display Trial", serif;
   font-weight: 600; }
 
+.expanded {
+  font-family: "GT America Expanded", sans-serif; }
+
 .section {
   width: 100%;
   margin: auto;
-  padding: 100px 0px; }
+  padding: 200px 0px; }
   .section.pb_0 {
+    padding-top: 100px;
     padding-bottom: 25px; }
   .section.pt {
     margin-top: -135px;
     padding-top: 250px; }
+  .section.pb {
+    padding-bottom: 500px; }
+  .section.rsvp {
+    margin-top: -250px; }
+
+.mt-1 {
+  margin-top: 100px; }
 
 .wrapper {
   width: calc(100% - 160px);
   max-width: 1600px;
   margin: auto; }
+  .wrapper img {
+    width: 100%; }
 
 p.major {
-  font-size: 1.5em;
+  font-size: 1.3em;
   line-height: 1.5em; }
+
+#confettiCanvas {
+  position: fixed !important;
+  pointer-events: none; }
 
 a.link {
   position: relative;
@@ -78,23 +104,21 @@ a.link {
     width: 25px;
     border-radius: 50%;
     top: 0;
-    right: -35px;
+    right: -42px;
     border: 1px solid #D1783B; }
   a.link:after {
-    content: '\f178';
-    font-family: "Font Awesome 5 Pro";
-    font-weight: 300;
-    color: #010A0C;
-    font-size: .7em;
+    content: url(../img/arrow-right.svg);
+    height: 25px;
+    width: 25px;
     position: absolute;
-    top: 7px;
-    right: -27px;
+    top: 1px;
+    right: -34px;
     -webkit-transition: .2s ease-in-out; }
   a.link:hover {
     text-decoration: underline;
     text-decoration-color: #D1783B; }
     a.link:hover:after {
-      right: -30px; }
+      right: -39px; }
   a.link#light {
     color: inherit; }
     a.link#light:before {
@@ -121,7 +145,10 @@ a.link {
     position: absolute;
     bottom: 60px;
     left: 50%;
-    margin-left: -50px; }
+    margin-left: -80px;
+    font-size: .8em; }
+    .hero .scroll-box a {
+      color: inherit; }
     .hero .scroll-box p {
       display: inline-block;
       position: relative; }
@@ -141,7 +168,7 @@ a.link {
         position: absolute;
         top: -20px;
         left: -58px;
-        fill: #FFFFFF;
+        stroke: #FFFFFF;
         animation-name: scroll_down;
         animation-duration: 2s;
         animation-iteration-count: infinite;
@@ -161,7 +188,8 @@ a.link {
   position: sticky;
   top: 0;
   padding: 25px 0px;
-  z-index: 99; }
+  z-index: 99;
+  font-family: "GT America Expanded", sans-serif; }
   .nav .wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -201,8 +229,6 @@ a.link {
     padding-right: 50px; }
   .grid .right {
     padding-left: 50px; }
-  .grid img {
-    width: 100%; }
   .grid .invited {
     position: absolute;
     z-index: 98;
@@ -271,8 +297,8 @@ a.link {
         height: 100%;
         font-size: 1em;
         border-left: 1px solid #FFFFFF;
-        font-family: "GT America Trial", sans-serif;
         color: #FFFFFF;
+        font-family: inherit;
         width: 100%;
         padding: 25px 10px 15px 10px; }
       .rsvp-form .inputs .input-group select {
@@ -289,7 +315,7 @@ a.link {
         font-size: 1em;
         border-bottom: 1px solid #FFFFFF;
         border-left: 1px solid #FFFFFF;
-        font-family: "GT America Trial", sans-serif;
+        font-family: inherit;
         color: #FFFFFF;
         padding: 25px 10px 15px 10px; }
       .rsvp-form .inputs .input-group.select:after {
@@ -345,7 +371,8 @@ a.link {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   font-size: .6em;
-  margin-top: 100px; }
+  margin-top: 100px;
+  font-family: "GT America Expanded", sans-serif; }
   .footer .left {
     grid-column: 1; }
   .footer .right {

@@ -24,9 +24,13 @@ $('#rsvp-form').submit(function() {
 	var submitURL = (baseURL + entry_name + '=' + name + '&' + entry_email + '=' + email + '&' + entry_dietary + '=' + dietary + '&' + entry_attend + '=' + attend + submitRef);
 
 	console.log(submitURL);
-	$('#no-target').attr('src', submitURL);
+	// $('#no-target').attr('src', submitURL);
+
+	$.confetti.start();
 
 	$('#rsvp-form').fadeOut();
 	$('#rsvp-sub').text('Thank you for RSVP\'ing. Make sure you save the date!');
 	$('.confirmation').fadeIn().css('display', 'inline-block');
+
+	// Add change of confirmation for `No` RSVP
 });
