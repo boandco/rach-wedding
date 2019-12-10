@@ -30,7 +30,7 @@ a.link {
 	&:hover {
 		text-decoration: underline;
 		text-decoration-color:$color_orange;
-		text-decoration-style:wavy;
+		// text-decoration-style:wavy;
 		&:after {
 			right:-30px;
 		}
@@ -68,7 +68,7 @@ a.link {
 	}
 	.scroll-box {
 		position: absolute;
-		bottom:80px;
+		bottom:60px;
 		left:50%;
 		margin-left:-50px;
 
@@ -112,10 +112,11 @@ a.link {
 	position: sticky;
 	top:0;
 	padding:25px 0px;
+	z-index: 99;
 	.wrapper {
 		display:grid;
 		grid-template-columns:1fr 1fr 1fr;
-		align-content:middle;
+		align-items:center;
 	}
 	.date {
 		font-size:.6em;
@@ -152,14 +153,36 @@ a.link {
 .grid {
 	display:grid;
 	grid-template-columns:1fr 1fr;
+	align-items:center;
 	.left, .right {
 		position: relative;
 	}
+	.left {
+		padding-right:50px;
+	}
+	.right {
+		padding-left:50px;
+	}
+	img {
+		width:100%;
+	}
 	.invited {
 		position: absolute;
+		z-index: 98;
 		top:-80px;
 		left:-100px;
-		-webkit-transition:.2s;
+		animation-name: rotatescroll;
+		animation-duration:20s;
+		animation-iteration-count:infinite;
+		animation-timing-function:linear;
+		@keyframes rotatescroll {
+			0% {
+				transform:rotate(0deg);
+			}
+			100% {
+				transform:rotate(360deg);
+			}
+		}
 	}
 }
 

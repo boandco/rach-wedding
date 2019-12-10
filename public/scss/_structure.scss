@@ -31,9 +31,19 @@ h1, h2, h3 {
 	&.pb_0 {
 		padding-bottom:25px;
 	}
+	&.pt {
+		margin-top:-135px;
+		padding-top: 250px;
+	}
 }
 .wrapper {
 	width:calc(100% - 160px);
 	max-width:1600px;
 	margin:auto;
+}
+p {
+	&.major {
+		font-size:1.5em;
+		line-height: 1.5em;
+	}
 }
