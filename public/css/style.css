@@ -15,6 +15,7 @@
   padding: 12px 50px;
   text-decoration: none;
   border: 1px solid;
+  font-size: .8em;
   -webkit-transition: .2s ease-in-out; }
   .btn.outline#dark {
     border-color: #D1783B;
@@ -261,7 +262,7 @@ a.link {
     font-size: .8em; }
   .rsvp-form .confirmation {
     display: none;
-    margin-top: 50px; }
+    margin-top: 15px; }
   .rsvp-form .inputs {
     display: grid;
     width: 100%; }
@@ -336,6 +337,7 @@ a.link {
       appearance: none;
       text-transform: uppercase;
       letter-spacing: .1em;
+      font-size: .85em;
       cursor: pointer;
       border-top: none; }
       .rsvp-form .inputs button[type="submit"] .fal {
