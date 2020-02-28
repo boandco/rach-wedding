@@ -1,17 +1,19 @@
 @import 'mixins';
 
-@include font-face("GT America Expanded", '/fonts/GT-America-Trial-Expanded-Regular', null, null, woff);
-@include font-face("GT America Extended", '/fonts/GT-America-Trial-Extended-Regular', null, null, woff);
+@include font-face("Ogg Medium", '/fonts/Ogg-Medium', null, null, woff);
+@include font-face("Ogg Light", '/fonts/Ogg-Light', null, null, woff);
+@include font-face("Knockout", '/fonts/Knockout-HTF34-JuniorSumo', null, null, woff);
 
-$heading-font: 'Beirut Display Trial', serif;
-$font-extended: 'GT America Extended', sans-serif;
-$font-expanded: 'GT America Expanded', sans-serif;
+$heading-font: 'Ogg Medium', serif;
+$font-body: 'Ogg Light', serif;
 
 $break-medium: "1010px";
 $break-small: "768px";
 
 * {
 	box-sizing:border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 html, body {
 	min-height: 100%;
@@ -19,7 +21,8 @@ html, body {
 }
 body {
 	background:$color_white;
-	font-family: $font-extended;
+	font-family: $font-body;
+	font-weight: medium;
 	margin:0;
 	padding:0;
 	font-size:1.2em;
@@ -28,10 +31,7 @@ body {
 }
 h1, h2, h3 {
 	font-family: $heading-font;
-	font-weight:600;
-}
-.expanded {
-	font-family: $font-expanded;
+	font-weight:normal;
 }
 .section {
 	width:100%;
@@ -58,7 +58,7 @@ h1, h2, h3 {
 }
 .wrapper {
 	width:calc(100% - 160px);
-	max-width:1600px;
+	max-width:1400px;
 	margin:auto;
 
 	img {

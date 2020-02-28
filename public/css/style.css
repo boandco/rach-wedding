@@ -18,11 +18,11 @@
   font-size: .8em;
   -webkit-transition: .2s ease-in-out; }
   .btn.outline#dark {
-    border-color: #D1783B;
-    color: #D1783B; }
+    border-color: #965541;
+    color: #965541; }
   .btn.outline#dark:hover {
-    background: #D1783B;
-    color: #D1783B; }
+    background: #965541;
+    color: #965541; }
   .btn.outline#light {
     border-color: #FFFFFF;
     color: #FFFFFF; }
@@ -30,16 +30,102 @@
     background: #FFFFFF;
     color: #010A0C; }
 
-@font-face {
-  font-family: "GT America Expanded";
-  src: url("/fonts/GT-America-Trial-Expanded-Regular.woff") format("woff"); }
+.scroll-box {
+  margin-left: 45px;
+  margin-top: 150px;
+  font-size: .8em; }
+  .scroll-box a {
+    color: inherit; }
+  .scroll-box p {
+    display: inline-block;
+    position: relative;
+    font-family: "Knockout", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-size: .5em; }
+    .scroll-box p:before {
+      content: "";
+      position: absolute;
+      top: -12px;
+      left: -45px;
+      height: 30px;
+      width: 30px;
+      border: 2px solid #965541;
+      border-radius: 50px; }
+    .scroll-box p:after {
+      content: url(../img/arrow-down.svg);
+      height: 40px;
+      width: 40px;
+      position: absolute;
+      top: -17px;
+      left: -36px;
+      stroke: #FFFFFF;
+      animation-name: scroll_down;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95); }
+
+@keyframes scroll_down {
+  0% {
+    top: -17px; }
+  25% {
+    top: -30px; }
+  50% {
+    top: -17px; }
+  100% {
+    top: -17px; } }
+
+a.link {
+  position: relative;
+  text-decoration: none;
+  color: #010A0C; }
+  a.link:before {
+    content: "";
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    top: 0;
+    right: -42px;
+    border: 1px solid #965541; }
+  a.link:after {
+    content: url(../img/arrow-right.svg);
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    top: 1px;
+    right: -34px;
+    -webkit-transition: .2s ease-in-out; }
+  a.link:hover {
+    text-decoration: underline;
+    text-decoration-color: #965541; }
+    a.link:hover:after {
+      right: -39px; }
+  a.link#light {
+    color: inherit; }
+    a.link#light:before {
+      border-color: #965541; }
+    a.link#light:after {
+      color: #965541; }
+    a.link#light:hover {
+      border-color: #965541; }
 
 @font-face {
-  font-family: "GT America Extended";
-  src: url("/fonts/GT-America-Trial-Extended-Regular.woff") format("woff"); }
+  font-family: "Ogg Medium";
+  src: url("/fonts/Ogg-Medium.woff") format("woff"); }
+
+@font-face {
+  font-family: "Ogg Light";
+  src: url("/fonts/Ogg-Light.woff") format("woff"); }
+
+@font-face {
+  font-family: "Knockout";
+  src: url("/fonts/Knockout-HTF34-JuniorSumo.woff") format("woff"); }
 
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 html, body {
   min-height: 100%;
@@ -47,7 +133,8 @@ html, body {
 
 body {
   background: #FFFFFF;
-  font-family: "GT America Extended", sans-serif;
+  font-family: "Ogg Light", serif;
+  font-weight: medium;
   margin: 0;
   padding: 0;
   font-size: 1.2em;
@@ -55,11 +142,8 @@ body {
   scroll-behaviour: smooth; }
 
 h1, h2, h3 {
-  font-family: "Beirut Display Trial", serif;
-  font-weight: 600; }
-
-.expanded {
-  font-family: "GT America Expanded", sans-serif; }
+  font-family: "Ogg Medium", serif;
+  font-weight: normal; }
 
 .section {
   width: 100%;
@@ -81,7 +165,7 @@ h1, h2, h3 {
 
 .wrapper {
   width: calc(100% - 160px);
-  max-width: 1600px;
+  max-width: 1400px;
   margin: auto; }
   .wrapper img {
     width: 100%; }
@@ -94,103 +178,54 @@ p.major {
   position: fixed !important;
   pointer-events: none; }
 
-a.link {
-  position: relative;
-  text-decoration: none;
-  color: #010A0C; }
-  a.link:before {
-    content: "";
-    position: absolute;
-    height: 25px;
-    width: 25px;
-    border-radius: 50%;
-    top: 0;
-    right: -42px;
-    border: 1px solid #D1783B; }
-  a.link:after {
-    content: url(../img/arrow-right.svg);
-    height: 25px;
-    width: 25px;
-    position: absolute;
-    top: 1px;
-    right: -34px;
-    -webkit-transition: .2s ease-in-out; }
-  a.link:hover {
-    text-decoration: underline;
-    text-decoration-color: #D1783B; }
-    a.link:hover:after {
-      right: -39px; }
-  a.link#light {
-    color: inherit; }
-    a.link#light:before {
-      border-color: #D1783B; }
-    a.link#light:after {
-      color: #D1783B; }
-    a.link#light:hover {
-      border-color: #D1783B; }
-
 .hero {
-  text-align: center;
-  min-height: 100vh;
-  position: relative; }
-  .hero h1 {
-    font-size: 4vw;
-    margin-bottom: 0; }
-  .hero .text {
+  text-align: left;
+  position: relative;
+  color: #965541; }
+  .hero .right {
+    float: right;
+    width: 50%;
+    position: relative;
+    z-index: 2; }
+  .hero .bg {
+    height: calc(100% - 350px);
     width: 100%;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%); }
-  .hero .scroll-box {
+    top: 0;
+    left: 0;
+    z-index: 0; }
+  .hero h1 {
+    font-size: 5.5rem;
+    margin-bottom: 0; }
+  .hero .text {
+    width: 600px;
+    position: relative;
+    z-index: 90; }
+    .hero .text p {
+      font-size: 1.8rem; }
+  .hero .invited {
     position: absolute;
-    bottom: 60px;
-    left: 50%;
-    margin-left: -80px;
-    font-size: .8em; }
-    .hero .scroll-box a {
-      color: inherit; }
-    .hero .scroll-box p {
-      display: inline-block;
-      position: relative; }
-      .hero .scroll-box p:before {
-        content: "";
-        position: absolute;
-        top: -10px;
-        left: -60px;
-        height: 40px;
-        width: 40px;
-        border: 1px solid #EDCECC;
-        border-radius: 50px; }
-      .hero .scroll-box p:after {
-        content: url(../img/arrow-down.svg);
-        height: 40px;
-        width: 40px;
-        position: absolute;
-        top: -20px;
-        left: -58px;
-        stroke: #FFFFFF;
-        animation-name: scroll_down;
-        animation-duration: 2s;
-        animation-iteration-count: infinite;
-        animation-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95); }
+    z-index: 98;
+    bottom: -80px;
+    right: -100px;
+    animation-name: rotatescroll;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; }
 
-@keyframes scroll_down {
+@keyframes rotatescroll {
   0% {
-    top: -20px; }
-  25% {
-    top: -30px; }
-  50% {
-    top: -20px; }
+    transform: rotate(0deg); }
   100% {
-    top: -20px; } }
+    transform: rotate(360deg); } }
 
 .nav {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   padding: 25px 0px;
   z-index: 99;
-  font-family: "GT America Expanded", sans-serif; }
+  font-family: "Knockout", sans-serif; }
   .nav .wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -211,11 +246,12 @@ a.link {
       display: inline-block;
       margin-left: 30px; }
   .nav a {
-    color: #010A0C;
-    font-size: .6em;
+    display: inline-block;
+    color: #965541;
+    font-size: .5em;
     text-transform: uppercase;
     text-decoration: none;
-    letter-spacing: .1em;
+    letter-spacing: .2em;
     transition: .2s ease-in-out; }
     .nav a:hover {
       opacity: .5; }
@@ -230,21 +266,6 @@ a.link {
     padding-right: 50px; }
   .grid .right {
     padding-left: 50px; }
-  .grid .invited {
-    position: absolute;
-    z-index: 98;
-    top: -80px;
-    left: -100px;
-    animation-name: rotatescroll;
-    animation-duration: 20s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear; }
-
-@keyframes rotatescroll {
-  0% {
-    transform: rotate(0deg); }
-  100% {
-    transform: rotate(360deg); } }
 
 .rsvp-form {
   color: #FFFFFF;
@@ -374,7 +395,7 @@ a.link {
   grid-template-columns: 1fr 1fr 1fr;
   font-size: .6em;
   margin-top: 100px;
-  font-family: "GT America Expanded", sans-serif; }
+  font-family: "Ogg Light", serif; }
   .footer .left {
     grid-column: 1; }
   .footer .right {
