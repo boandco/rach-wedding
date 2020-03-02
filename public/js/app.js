@@ -6,6 +6,14 @@ $('input').focusout(function(event) {
 		$(this).parent().find('label').removeClass('active');
 	}
 });
+$('a#std').click(function() {
+	$('.modal').fadeIn();
+
+	event.preventDefault();
+});
+$('.close').click(function() {
+	$('.modal').fadeOut();
+});
 
 $('#rsvp-form').submit(function() {
 	event.preventDefault();

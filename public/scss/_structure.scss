@@ -2,10 +2,11 @@
 
 @include font-face("Ogg Medium", '/fonts/Ogg-Medium', null, null, woff);
 @include font-face("Ogg Light", '/fonts/Ogg-Light', null, null, woff);
+@include font-face("Ogg Regular", '/fonts/Ogg-Regular', null, null, woff);
 @include font-face("Knockout", '/fonts/Knockout-HTF34-JuniorSumo', null, null, woff);
 
 $heading-font: 'Ogg Medium', serif;
-$font-body: 'Ogg Light', serif;
+$font-body: 'Ogg Regular', serif;
 
 $break-medium: "1010px";
 $break-small: "768px";
@@ -29,9 +30,90 @@ body {
 	overflow-x:hidden;
 	scroll-behaviour:smooth;
 }
-h1, h2, h3 {
+h1 {
 	font-family: $heading-font;
 	font-weight:normal;
+	&.alt {
+		font-family: $font-body;
+	}
+}
+.modal {
+	position: fixed;
+	height: 100%;
+	width:100%;
+	top:0;
+	left:0;
+	z-index: 100;
+	background:$color_offwhite;
+	display: none;
+
+	.popup {
+		position: relative;
+		top:50%;
+		left:50%;
+		max-width: 500px;
+		background: $color_white;
+		color:$color_black;
+		padding:50px;
+		-webkit-transform:translate(-50%,-50%);
+
+		.close {
+			height:30px;
+			width:30px;
+			position: absolute;
+			top:0;
+			right:0;
+			cursor:pointer;
+
+			&:before {
+				content:"";
+				width:100%;
+				height:1px;
+				background:$color_black;
+				position: absolute;
+				top:25px;
+				left:-10px;
+
+				-webkit-transform:rotate(45deg);
+			}
+			&:after {
+				content:"";
+				width:100%;
+				height:1px;
+				background:$color_black;
+				position: absolute;
+				top:25px;
+				left:-10px;
+
+				-webkit-transform:rotate(-45deg);
+			}
+		}
+
+		.cals {
+			list-style-type: none;
+			display: grid;
+			grid-template-columns:1fr 1fr 1fr;
+			padding:0;
+			margin:0;
+			margin-top:50px;
+
+			li {
+				img {
+					height:25px;
+					margin-right:10px;
+					display: inline-block;
+				}
+				p {
+					position: relative;
+					top:-6px;
+					display: inline-block;
+				}
+			}
+		}
+	}
+}
+.center {
+	text-align: center;
 }
 .section {
 	width:100%;
@@ -51,10 +133,15 @@ h1, h2, h3 {
 	}
 	&.rsvp {
 		margin-top:-250px;
+		position: relative;
+		z-index: 3;
 	}
 }
 .mt-1 {
 	margin-top:100px;
+}
+.mt-2 {
+	margin-top:150px;
 }
 .wrapper {
 	width:calc(100% - 250px);
@@ -63,11 +150,5 @@ h1, h2, h3 {
 
 	img {
 		width:100%;
-	}
-}
-p {
-	&.major {
-		font-size:1.3em;
-		line-height: 1.5em;
 	}
 }

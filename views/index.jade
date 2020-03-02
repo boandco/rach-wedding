@@ -3,17 +3,20 @@ html
 	head
 		title Rachel's Wedding
 		meta(name="viewport", content="initial-scale=1.0, width=device-width")
+		link(rel="shortcut icon", href="img/favicon.ico", type="image/x-icon")
+		link(rel="icon", href="img/favicon.ico", type="image/x-icon")
 		link(href='css/style.css', rel='stylesheet')
-		link(href='css/locomotive-scroll.min.css', rel='stylesheet')
 		link(href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css', rel="stylesheet")
 		script(src="https://code.jquery.com/jquery-3.4.1.min.js", type="text/javascript")
 		script(src="https://kit.fontawesome.com/8544583964.js", type="text/javascript")
 	body
+		include assets/popup.jade
 		include assets/nav.jade
 		include assets/hero.jade
-		a(id="registry")
-		include assets/registry.jade
+		a(id="info")
+		include assets/info.jade
 		include assets/photo-break.jade
+		include assets/hotel.jade
 		include assets/venue.jade
 		include assets/rsvp.jade
 
