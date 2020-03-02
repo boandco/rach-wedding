@@ -5,25 +5,31 @@ $font-knockout: 'Knockout', sans-serif;
 	padding:12px 50px;
 	text-decoration: none;
 	border:1px solid;
-	font-size:.8em;
+	letter-spacing: .2em;
+	text-transform: uppercase;
+	font-family: $font-knockout;
 
 	-webkit-transition:.2s ease-in-out;
 
-	&.outline#dark {
+	&.outline.dark {
 		border-color:$color_orange;
 		color:$color_orange;
 	}
-	&.outline#dark:hover {
+	&.outline.dark:hover {
 		background:$color_orange;
 		color:$color_orange;
 	}
-	&.outline#light {
+	&.outline.light {
 		border-color:$color_white;
 		color:$color_white;
 	}
-	&.outline#light:hover {
+	&.outline.light:hover {
 		background:$color_white;
 		color:$color_black;
+	}
+	&#std {
+		margin-top:50px;
+		font-size:.6em;
 	}
 }
 

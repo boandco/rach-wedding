@@ -284,8 +284,6 @@ ul.info {
     		-moz-appearance: none;
     		appearance:none;
     		font-family: $font-knockout;
-    		text-transform: uppercase;
-    		letter-spacing: .2em;
     		cursor: pointer;
     		border-top:none;
 
@@ -346,6 +344,10 @@ ul.info {
 	text-transform: uppercase;
 	margin-top:100px;
 	font-family: $font-knockout;
+
+	p {
+		font-size:.5em;
+	}
 
 	.left {
 		grid-column:1;

@@ -5,7 +5,7 @@ a(id="rsvp")
 			.rsvp-form
 				h1#rsvp-head RSVP Below
 				p#rsvp-sub We're looking forward to partying with you, but we need some info first.
-				a.btn.outline.confirmation#light(href="", target="_blank") Save the date to calendar
+				a.btn.outline.confirmation.light#std(href="#") Save the date to calendar
 				form#rsvp-form(action="" method="POST" target="no-target" autocomplete="off")
 					.inputs.one
 						.input-group
@@ -23,6 +23,6 @@ a(id="rsvp")
 							select#attend(name="attend")
 								option(value="Yes") Yes,  I'll be there
 								option(value="No") Sorry, can't make it
-						button.btn.outline#light(type="submit") RSVP
+						button.btn.outline.light(type="submit") RSVP
 				iframe(src="#" id="no-target" name="no-target" style="visibility:hidden;display:none;")
 				include footer.jade

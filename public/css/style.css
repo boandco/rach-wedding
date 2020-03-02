@@ -18,20 +18,25 @@
   padding: 12px 50px;
   text-decoration: none;
   border: 1px solid;
-  font-size: .8em;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  font-family: "Knockout", sans-serif;
   -webkit-transition: .2s ease-in-out; }
-  .btn.outline#dark {
+  .btn.outline.dark {
     border-color: #965541;
     color: #965541; }
-  .btn.outline#dark:hover {
+  .btn.outline.dark:hover {
     background: #965541;
     color: #965541; }
-  .btn.outline#light {
+  .btn.outline.light {
     border-color: #FFFFFF;
     color: #FFFFFF; }
-  .btn.outline#light:hover {
+  .btn.outline.light:hover {
     background: #FFFFFF;
     color: #010A0C; }
+  .btn#std {
+    margin-top: 50px;
+    font-size: .6em; }
 
 .scroll-box {
   margin-left: 45px;
@@ -450,8 +455,6 @@ ul.info {
       -moz-appearance: none;
       appearance: none;
       font-family: "Knockout", sans-serif;
-      text-transform: uppercase;
-      letter-spacing: .2em;
       cursor: pointer;
       border-top: none; }
       .rsvp-form .inputs button[type="submit"] .fal {
@@ -491,6 +494,8 @@ ul.info {
   text-transform: uppercase;
   margin-top: 100px;
   font-family: "Knockout", sans-serif; }
+  .footer p {
+    font-size: .5em; }
   .footer .left {
     grid-column: 1; }
   .footer .right {
