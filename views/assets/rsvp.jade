@@ -3,6 +3,7 @@ a(id="rsvp")
 	.section.rsvp.green.pb_0
 		.wrapper.wow.fadeIn
 			.rsvp-form
+				h1#rsvp-head RSVP Below
 				p#rsvp-sub We're looking forward to partying with you, but we need some info first.
 				a.btn.outline.confirmation#light(href="", target="_blank") Save the date to calendar
 				form#rsvp-form(action="" method="POST" target="no-target" autocomplete="off")
@@ -11,7 +12,7 @@ a(id="rsvp")
 							label(for="name") Your name
 							input#name(type="text", name="name", required)
 						.input-group
-							label(for="email") Your email
+							label(for="email") E-mail
 							input#email(type="email", name="email", required)
 					.inputs.two
 						.input-group
@@ -22,6 +23,6 @@ a(id="rsvp")
 							select#attend(name="attend")
 								option(value="Yes") Yes,  I'll be there
 								option(value="No") Sorry, can't make it
-						button.btn.outline#light(type="submit") RSVP <i class="fal fa-long-arrow-right"></i>
+						button.btn.outline#light(type="submit") RSVP
 				iframe(src="#" id="no-target" name="no-target" style="visibility:hidden;display:none;")
 				include footer.jade

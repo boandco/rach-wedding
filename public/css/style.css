@@ -164,7 +164,7 @@ h1, h2, h3 {
   margin-top: 100px; }
 
 .wrapper {
-  width: calc(100% - 160px);
+  width: calc(100% - 250px);
   max-width: 1400px;
   margin: auto; }
   .wrapper img {
@@ -177,47 +177,6 @@ p.major {
 #confettiCanvas {
   position: fixed !important;
   pointer-events: none; }
-
-.hero {
-  text-align: left;
-  position: relative;
-  color: #965541; }
-  .hero .right {
-    float: right;
-    width: 50%;
-    position: relative;
-    z-index: 2; }
-  .hero .bg {
-    height: calc(100% - 350px);
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0; }
-  .hero h1 {
-    font-size: 5.5rem;
-    margin-bottom: 0; }
-  .hero .text {
-    width: 600px;
-    position: relative;
-    z-index: 90; }
-    .hero .text p {
-      font-size: 1.8rem; }
-  .hero .invited {
-    position: absolute;
-    z-index: 98;
-    bottom: -80px;
-    right: -100px;
-    animation-name: rotatescroll;
-    animation-duration: 20s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear; }
-
-@keyframes rotatescroll {
-  0% {
-    transform: rotate(0deg); }
-  100% {
-    transform: rotate(360deg); } }
 
 .nav {
   position: fixed;
@@ -286,7 +245,11 @@ p.major {
     margin-top: 15px; }
   .rsvp-form .inputs {
     display: grid;
-    width: 100%; }
+    width: 100%;
+    font-family: "Knockout", sans-serif;
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: .2em; }
     .rsvp-form .inputs.one {
       grid-template-columns: 1fr 1fr;
       border-bottom: 1px solid #FFFFFF;
@@ -302,10 +265,11 @@ p.major {
       height: 100%; }
       .rsvp-form .inputs .input-group label {
         position: absolute;
-        top: 20px;
+        top: 23px;
         left: 11px;
         pointer-events: none;
-        -webkit-transition: .2s ease-in-out; }
+        -webkit-transition: .2s ease-in-out;
+        font-size: .7em; }
         .rsvp-form .inputs .input-group label.active {
           top: 9px;
           opacity: .8;
@@ -334,7 +298,9 @@ p.major {
         -moz-appearance: none;
         appearance: none;
         position: relative;
-        font-size: 1em;
+        font-size: .7em;
+        text-transform: uppercase;
+        letter-spacing: .2em;
         border-bottom: 1px solid #FFFFFF;
         border-left: 1px solid #FFFFFF;
         font-family: inherit;
@@ -356,9 +322,9 @@ p.major {
       -webkit-appearance: none;
       -moz-appearance: none;
       appearance: none;
+      font-family: "Knockout", sans-serif;
       text-transform: uppercase;
-      letter-spacing: .1em;
-      font-size: .85em;
+      letter-spacing: .2em;
       cursor: pointer;
       border-top: none; }
       .rsvp-form .inputs button[type="submit"] .fal {
@@ -393,9 +359,11 @@ p.major {
 .footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  font-size: .6em;
+  font-size: .5em;
+  letter-spacing: .2em;
+  text-transform: uppercase;
   margin-top: 100px;
-  font-family: "Ogg Light", serif; }
+  font-family: "Knockout", sans-serif; }
   .footer .left {
     grid-column: 1; }
   .footer .right {
