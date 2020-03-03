@@ -15,6 +15,27 @@ $('.close').click(function() {
 	$('.modal').fadeOut();
 });
 
+$('.carousel').mousedown(function() {
+	var cmp = parseInt(event.clientX);
+	var csl = $('.carousel').scrollLeft();
+	$(this).mousemove(function() {
+		var nmp = parseInt(event.clientX);
+		var moveamount;
+		if (csl == '0') {
+			moveamount = cmp - nmp;
+		} else {
+			moveamount = csl + (cmp - nmp);
+		}
+		$('.carousel').scrollLeft(moveamount);
+	});
+
+	$(this).addClass('down');
+});
+$('.carousel').mouseup(function() {
+	$(this).unbind('mousemove');
+	$(this).removeClass('down');
+});
+
 $('#rsvp-form').submit(function() {
 	event.preventDefault();
 	var name = encodeURIComponent($('#name').val());

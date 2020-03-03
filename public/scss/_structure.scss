@@ -120,6 +120,10 @@ h1 {
 	margin:auto;
 	padding:200px 0px;
 
+	&.photo {
+		padding:50px 0px;
+	}
+
 	&.pb_0 {
 		padding-top:100px;
 		padding-bottom:25px;
