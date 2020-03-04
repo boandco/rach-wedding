@@ -1,3 +1,7 @@
+$(window).on('load', function () {
+	$('.loading').fadeOut();
+});
+
 $('input').focus(function(event) {
 	$(this).parent().find('label').addClass('active');
 });
@@ -28,7 +32,6 @@ $('.carousel').mousedown(function() {
 		}
 		$('.carousel').scrollLeft(moveamount);
 	});
-
 	$(this).addClass('down');
 });
 $('.carousel').mouseup(function() {
@@ -60,6 +63,7 @@ $('#rsvp-form').submit(function() {
 	$('#rsvp-form').fadeOut();
 	$('#rsvp-sub').text('Thank you for RSVP\'ing. Make sure you save the date!');
 	$('.confirmation').fadeIn().css('display', 'inline-block');
+	$('.rsvp-form').addClass('confirm');
 
 	// Add change of confirmation for `No` RSVP
 });

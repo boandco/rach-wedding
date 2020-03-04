@@ -1,12 +1,12 @@
 a(id="rsvp")
-.wrapper
+.wrapper.rsvpbox
 	.section.rsvp.green.pb_0
 		.wrapper.wow.fadeIn
 			.rsvp-form
-				h1#rsvp-head RSVP Below
-				p#rsvp-sub We're looking forward to partying with you, but we need some info first.
+				h1#rsvp-head.wow.fadeIn RSVP Below
+				p#rsvp-sub.wow.fadeIn(data-wow-delay=".2s") We're looking forward to partying with you, but we need some info first.
 				a.btn.outline.confirmation.light#std(href="#") Save the date to calendar
-				form#rsvp-form(action="" method="POST" target="no-target" autocomplete="off")
+				form#rsvp-form.wow.fadeIn(action="" method="POST" target="no-target" autocomplete="off" data-wow-delay=".4s")
 					.inputs.one
 						.input-group
 							label(for="name") Your name

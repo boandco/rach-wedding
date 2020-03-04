@@ -8,9 +8,9 @@
 $heading-font: 'Ogg Medium', serif;
 $font-body: 'Ogg Regular', serif;
 
-$break-medium: "1010px";
-$break-small: "768px";
-
+.wow {
+	visibility:hidden;
+}
 * {
 	box-sizing:border-box;
 	-webkit-font-smoothing: antialiased;
@@ -19,6 +19,7 @@ $break-small: "768px";
 html, body {
 	min-height: 100%;
 	min-width: 100%;
+	overflow-x:hidden;
 }
 body {
 	background:$color_white;
@@ -27,14 +28,57 @@ body {
 	margin:0;
 	padding:0;
 	font-size:1.2em;
-	overflow-x:hidden;
 	scroll-behaviour:smooth;
+
+	@media screen and (max-width: $break-small) {
+		font-size:1em;
+	}
 }
 h1 {
 	font-family: $heading-font;
 	font-weight:normal;
 	&.alt {
 		font-family: $font-body;
+	}
+}
+.loading {
+	position:absolute;
+	height:100%;
+	width:100%;
+	top:0;
+	left:0;
+	z-index: 120;
+	background:$color_offwhite;
+
+	.logo {
+		width:75px;
+		position:absolute;
+		top:50%;
+		left:50%;
+		-webkit-transform:translate(-50%,-50%);
+	}
+
+	.invited {
+		position: absolute;
+		top:50%;
+		left:50%;
+		height:300px;
+		width:300px;
+		margin-top:-150px;
+		margin-left:-150px;
+		animation-name: rotatescroll;
+		animation-duration: 20s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+
+		@keyframes rotatescroll {
+			0% {
+				transform: rotate(0deg); 
+			}
+			100% {
+				transform: rotate(360deg);
+			}
+		}
 	}
 }
 .modal {
@@ -55,7 +99,16 @@ h1 {
 		background: $color_white;
 		color:$color_black;
 		padding:50px;
+		transform:translate(-50%,-50%);
+		-o-transform:translate(-50%,-50%);
+		-ms-transform:translate(-50%,-50%);
+		-moz-transform:translate(-50%,-50%);
 		-webkit-transform:translate(-50%,-50%);
+
+		@media screen and (max-width: $break-medium) {
+			max-width:90%;
+			padding:25px;
+		}
 
 		.close {
 			height:30px;
@@ -73,7 +126,10 @@ h1 {
 				position: absolute;
 				top:25px;
 				left:-10px;
-
+				transform:rotate(45deg);
+				-o-transform:rotate(45deg);
+				-ms-transform:rotate(45deg);
+				-moz-transform:rotate(45deg);
 				-webkit-transform:rotate(45deg);
 			}
 			&:after {
@@ -84,7 +140,10 @@ h1 {
 				position: absolute;
 				top:25px;
 				left:-10px;
-
+				transform:rotate(-45deg);
+				-o-transform:rotate(-45deg);
+				-ms-transform:rotate(-45deg);
+				-moz-transform:rotate(-45deg);
 				-webkit-transform:rotate(-45deg);
 			}
 		}
@@ -109,6 +168,14 @@ h1 {
 					display: inline-block;
 				}
 			}
+
+			@media screen and (max-width: $break-medium) {
+				grid-template-columns:1fr;
+				margin-top:0;
+				li {
+					margin-top:25px;
+				}
+			}
 		}
 	}
 }
@@ -119,9 +186,16 @@ h1 {
 	width:100%;
 	margin:auto;
 	padding:200px 0px;
+	
+	@media screen and (max-width: $break-small) {
+		padding:150px 0px;
+	}
 
 	&.photo {
 		padding:50px 0px;
+		@media screen and (max-width: $break-small) {
+			padding:0px;
+		}
 	}
 
 	&.pb_0 {
@@ -139,6 +213,16 @@ h1 {
 		margin-top:-250px;
 		position: relative;
 		z-index: 3;
+
+		@media screen and (max-width: $break-medium) {
+			padding:50px 0px 0px 0px;
+			.wrapper {
+				width:90%;
+			}
+		}
+		@media screen and (max-width: $break-small) {
+			padding:15px 0px 0px 0px;
+		}
 	}
 }
 .mt-1 {
@@ -146,6 +230,11 @@ h1 {
 }
 .mt-2 {
 	margin-top:150px;
+
+	@media screen and (max-width: $break-small) {
+		margin-top:0px;
+		padding-bottom:100px;
+	}
 }
 .wrapper {
 	width:calc(100% - 250px);
@@ -154,5 +243,16 @@ h1 {
 
 	img {
 		width:100%;
+	}
+
+	@media screen and (max-width: $break-medium) {
+		width:calc(100% - 150px);
+	}
+	@media screen and (max-width: $break-small) {
+		width:85%;
+
+		&.rsvpbox {
+			width:100%;
+		}
 	}
 }
