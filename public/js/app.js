@@ -18,7 +18,9 @@ $('a#std').click(function() {
 $('.close').click(function() {
 	$('.modal').fadeOut();
 });
-
+$('.carousel').bind('touchstart', function() {
+	$('.drag-icon').fadeOut();
+});
 $('.carousel').mousedown(function() {
 	$('.drag-icon').fadeOut();
 	var cmp = parseInt(event.clientX);
