@@ -20,6 +20,7 @@ $('.close').click(function() {
 });
 
 $('.carousel').mousedown(function() {
+	$('.drag-icon').fadeOut();
 	var cmp = parseInt(event.clientX);
 	var csl = $('.carousel').scrollLeft();
 	$(this).mousemove(function() {

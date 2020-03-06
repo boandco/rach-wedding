@@ -166,7 +166,7 @@ h1 {
     font-family: "Ogg Regular", serif; }
 
 .loading {
-  position: absolute;
+  position: fixed;
   height: 100%;
   width: 100%;
   top: 0;
@@ -213,7 +213,7 @@ h1 {
     left: 50%;
     max-width: 500px;
     background: #FFFFFF;
-    color: #010A0C;
+    color: #965541;
     padding: 50px;
     transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
@@ -522,6 +522,32 @@ ul.info {
     display: none; }
   .carousel.down {
     cursor: grabbing; }
+  .carousel .drag-icon {
+    background: #965541;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 50px;
+    height: 70px;
+    width: 70px;
+    border-radius: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    z-index: 99; }
+    .carousel .drag-icon p {
+      margin: 0;
+      padding: 0;
+      position: relative;
+      top: -15px;
+      left: -20px; }
+      @media screen and (max-width: 768px) {
+        .carousel .drag-icon p {
+          font-size: 1.2em; } }
   .carousel li {
     pointer-events: none;
     position: absolute; }
@@ -667,7 +693,7 @@ p.scroll {
   .rsvp-form p {
     margin: 0;
     font-size: 1.3em;
-    color: #FAF4EE; }
+    color: #FFFFFF; }
   .rsvp-form form {
     margin-top: 50px;
     font-size: .8em; }

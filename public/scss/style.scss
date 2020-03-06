@@ -233,9 +233,39 @@ ul.info {
 	&::-webkit-scrollbar {
 		display:none;
 	}
-
 	&.down {
 		cursor: grabbing;
+	}
+
+	.drag-icon {
+		background:$color_orange;
+		color:$color_white;
+		text-align: center;
+		padding:50px;
+		height: 70px;
+		width:70px;
+		border-radius: 50px;
+		position: absolute;
+		top:50%;
+		left:50%;
+		transform:translate(-50%,-50%);
+		-o-transform:translate(-50%,-50%);
+		-ms-transform:translate(-50%,-50%);
+		-moz-transform:translate(-50%,-50%);
+		-webkit-transform:translate(-50%,-50%);
+		z-index: 99;
+
+		p {
+			margin: 0;
+			padding: 0;
+			position: relative;
+			top: -15px;
+			left: -20px;
+
+			@media screen and (max-width: $break-small) {
+				font-size:1.2em;
+			}
+		}
 	}
 
 	li {
@@ -414,7 +444,7 @@ p.scroll {
 	p {
 		margin:0;
 		font-size:1.3em;
-		color:$color_offwhite;
+		color:$color_white;
 	}
 
 	form {

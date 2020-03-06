@@ -42,7 +42,7 @@ h1 {
 	}
 }
 .loading {
-	position:absolute;
+	position:fixed;
 	height:100%;
 	width:100%;
 	top:0;
@@ -97,7 +97,7 @@ h1 {
 		left:50%;
 		max-width: 500px;
 		background: $color_white;
-		color:$color_black;
+		color:$color_orange;
 		padding:50px;
 		transform:translate(-50%,-50%);
 		-o-transform:translate(-50%,-50%);
