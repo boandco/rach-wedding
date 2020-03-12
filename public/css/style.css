@@ -526,11 +526,16 @@ ul.info {
       margin: 0;
       padding: 0;
       position: relative;
-      top: -15px;
-      left: -20px; }
+      top: -7px;
+      left: -26px;
+      font-size: .7em;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      font-family: "Knockout", sans-serif; }
       @media screen and (max-width: 768px) {
         .section.photo .drag-icon p {
-          font-size: 1.2em; } }
+          font-size: .85em;
+          left: -27px; } }
 
 .carousel {
   position: relative;
@@ -660,14 +665,6 @@ ul.info {
           left: 1850px; } }
       .carousel li.ten img {
         transform: rotate(13deg); }
-
-p.scroll {
-  margin-top: 15px;
-  font-size: .6em;
-  letter-spacing: .2em;
-  text-transform: uppercase;
-  font-family: "Knockout", sans-serif;
-  color: rgba(0, 0, 0, 0.4); }
 
 .map {
   padding: 0;
