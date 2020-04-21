@@ -18,7 +18,7 @@
     // objects
 
     var particleColors = {
-        colorOptions: ["DodgerBlue", "OliveDrab", "Gold", "pink", "SlateBlue", "lightblue", "Violet", "PaleGreen", "SteelBlue", "SandyBrown", "Chocolate", "Crimson"],
+        colorOptions: ["#965541", "#CFDCE9", "#FAF4EE", "#F5CD64", "#FBD2C9", "#FFE39C", "#BDE1C0", "#FF9979", "#FFFFFF", "#415A48"],
         colorIndex: 0,
         colorIncrementer: 0,
         colorThreshold: 10,

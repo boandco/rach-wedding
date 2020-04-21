@@ -12,14 +12,16 @@ $('input').focusout(function(event) {
 });
 $('a#std').click(function() {
 	$('.modal').fadeIn();
-
 	event.preventDefault();
 });
 $('.close').click(function() {
 	$('.modal').fadeOut();
 });
-
+$('.carousel').bind('touchstart', function() {
+	$('.drag-icon').fadeOut();
+});
 $('.carousel').mousedown(function() {
+	$('.drag-icon').fadeOut();
 	var cmp = parseInt(event.clientX);
 	var csl = $('.carousel').scrollLeft();
 	$(this).mousemove(function() {
@@ -35,6 +37,9 @@ $('.carousel').mousedown(function() {
 	$(this).addClass('down');
 });
 $('.carousel').mouseup(function() {
+	if ($('.carousel').scrollLeft() == 0) {
+		$('.drag-icon').fadeIn();
+	}
 	$(this).unbind('mousemove');
 	$(this).removeClass('down');
 });
@@ -56,7 +61,7 @@ $('#rsvp-form').submit(function() {
 	var submitURL = (baseURL + entry_name + '=' + name + '&' + entry_email + '=' + email + '&' + entry_dietary + '=' + dietary + '&' + entry_attend + '=' + attend + submitRef);
 
 	console.log(submitURL);
-	// $('#no-target').attr('src', submitURL);
+	$('#no-target').attr('src', submitURL);
 
 	$.confetti.start();
 
