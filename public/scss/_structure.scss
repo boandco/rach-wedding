@@ -41,8 +41,16 @@ h1 {
 		font-family: $font-body;
 	}
 }
+p {
+	&.alt {
+		font-family:$font-knockout;
+	    font-size: .7em;
+	    text-transform: uppercase;
+	    letter-spacing: 3px;
+	}
+}
 .loading {
-	position:absolute;
+	position:fixed;
 	height:100%;
 	width:100%;
 	top:0;

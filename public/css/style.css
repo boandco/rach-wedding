@@ -165,8 +165,14 @@ h1 {
   h1.alt {
     font-family: "Ogg Regular", serif; }
 
+p.alt {
+  font-family: "Knockout", sans-serif;
+  font-size: .7em;
+  text-transform: uppercase;
+  letter-spacing: 3px; }
+
 .loading {
-  position: absolute;
+  position: fixed;
   height: 100%;
   width: 100%;
   top: 0;
