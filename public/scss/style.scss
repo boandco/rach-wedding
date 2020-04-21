@@ -411,6 +411,15 @@ ul.info {
 	}
 }
 
+p.scroll {
+	margin-top:15px;
+	font-size:.6em;
+	letter-spacing: .2em;
+	text-transform: uppercase;
+	font-family: $font-knockout;
+	color:rgba(0,0,0,.4);
+}
+
 .map {
 	padding:0;
 	position: relative;

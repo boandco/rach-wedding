@@ -672,6 +672,14 @@ ul.info {
       .carousel li.ten img {
         transform: rotate(13deg); }
 
+p.scroll {
+  margin-top: 15px;
+  font-size: .6em;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  font-family: "Knockout", sans-serif;
+  color: rgba(0, 0, 0, 0.4); }
+
 .map {
   padding: 0;
   position: relative;
