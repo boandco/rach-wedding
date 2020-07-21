@@ -368,6 +368,12 @@ p.alt {
     opacity: .5;
     padding: 0;
     margin: 0; }
+    .nav .date sup {
+      font-size: .2em;
+      text-transform: lowercase;
+      letter-spacing: initial;
+      position: relative;
+      left: -2px; }
   .nav .logo {
     text-align: center; }
   .nav ul.nav_links {
@@ -495,6 +501,8 @@ ul.info {
     ul.info li p {
       font-size: 1.5em;
       color: #965541; }
+    ul.info li sup {
+      font-size: .6em; }
   @media screen and (max-width: 1124px) {
     ul.info {
       grid-template-columns: 1fr 1fr;
