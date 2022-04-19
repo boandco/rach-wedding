@@ -11,6 +11,7 @@
   },
   "scripts": {
     "start": "node index.js",
+    "build": "pug views/index.pug --out public",
     "test": "echo \"Error: no test specified\" && exit 1",
     "scss": "node-sass --watch public/scss -o public/css"
   },
